@@ -33,7 +33,7 @@ function lastInLine() {
 function stringOutputQueue() {
 	stringValue = "";
 	for(var i = 0; i < this.dataQueue.length; ++i) {
-		stringValue += i+1 +". " + this.dataQueue[i] + "\n";
+		stringValue += (i+1) +". " + this.dataQueue[i] + "\n";
 	}
 	return stringValue;
 }
