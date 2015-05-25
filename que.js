@@ -22,7 +22,7 @@ function firstInLine() {
 	if(this.dataQueue.length) {
 		return this.dataQueue[0];
 	} else {
-		return "The line is empty!"
+		return "The line is empty!";
 	}
 }
 
@@ -49,12 +49,12 @@ function stringOutputQueue() {
 function isQueueEmpty() {
 	var queueLength = this.dataQueue.length;
 	if(queueLength === 0) {
-		console.log("There is no one in the queue.")
+		console.log("There is no one in the queue.");
 		return true;
 	}
 	else {
-		personResponse = this.personPlural(queueLength)
-		console.log("The Queue is not empty. " + queueLength + personResponse)
+		personResponse = this.personPlural(queueLength);
+		console.log("The Queue is not empty. " + queueLength + personResponse);
 		return false;
 	}
 
@@ -64,10 +64,10 @@ var bankLine = new QueueMethod();
 bankLine.addToQueue("David");
 console.log(bankLine.stringOutputQueue());
 bankLine.addToQueue("Anne");
-console.log("-----------------------------------")
+console.log("-----------------------------------");
 console.log(bankLine.stringOutputQueue());
 bankLine.addToQueue("Doris");
-console.log("-----------------------------------")
+console.log("-----------------------------------");
 console.log(bankLine.stringOutputQueue());
 bankLine.isQueueEmpty();
 bankLine.removeFromQueue();
