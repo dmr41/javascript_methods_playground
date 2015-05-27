@@ -11,6 +11,7 @@ function LinkedList(){
 	this.removeItem = removeItem;
 	this.showList = showList;
 	this.findLast = findLast;
+	this.showReverse = showReverse;
 }
 
 
@@ -70,6 +71,15 @@ function showList(){
 	 }
 }
 
+function showReverse() {
+var currentNode = this.listHead;
+currentNode = this.findLast();
+while (currentNode.previous !== null) {
+      console.log(currentNode.singleElement);
+			currentNode = currentNode.previous;
+   }
+}
+
 var bobby = new LinkedList();
 bobby.addToList("joey", "head");
 bobby.addToList("billy", "joey");
@@ -77,13 +87,7 @@ bobby.addToList("teddy", "billy");
 bobby.addToList("jimmy", "teddy");
 
 bobby.removeItem("jimmy");
-bobby.removeItem("joey");
-bobby.removeItem("jimmy");
-bobby.removeItem("joey");
-bobby.removeItem("jimmy");
-bobby.removeItem("joey");
-bobby.removeItem("jimmy");
-bobby.removeItem("joey");
 
 bobby.showList();
-// bobby.findLast();
+bobby.removeItem("teddy");
+bobby.showReverse();
