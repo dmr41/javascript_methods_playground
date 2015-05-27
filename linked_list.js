@@ -31,11 +31,10 @@ function addToList(newElement, oldElement){
 
 function findPreviousElement(element) {
 	var currentNode = this.listHead;
-	while ((currentNode.next !== null) && (currentNode.next.singleElement !== element)) {
+	while ((currentNode.next !== null) &&
+	(currentNode.next.singleElement !== element)) {
 		currentNode = currentNode.next;
 	}
-	console.log(currentNode);
-	console.log("--------")
 	return currentNode;
 }
 
@@ -62,8 +61,7 @@ bobby.addToList("billy", "joey");
 bobby.addToList("teddy", "billy");
 bobby.addToList("jimmy", "teddy");
 bobby.removeItem("jimmy");
-// bobby.removeItem("billy");
-console.log
+
 console.log(bobby.findPreviousElement("teddy"));
-// bobby.findPreviousElement("teddy");
-// bobby.showList();
+bobby.findPreviousElement("teddy");
+bobby.showList();
